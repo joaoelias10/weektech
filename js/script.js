@@ -180,7 +180,7 @@ window.loginAdmin = async function () {
 
     showToast('Login realizado! Redirecionando... 🔐');
     // Redireciona para o painel após 800ms (tempo do toast aparecer)
-    setTimeout(() => { window.location.href = 'dashboard.html'; }, 800);
+    setTimeout(() => { window.location.href = 'pages/dashboard.html'; }, 800);
 
   } catch (err) {
     // Mensagens de erro amigáveis

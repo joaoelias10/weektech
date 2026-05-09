@@ -11,7 +11,7 @@ async function checkSession() {
   const { data: { session } } = await sb.auth.getSession();
   if (!session) {
     // Sem sessão ativa → volta para o login
-    window.location.href = 'index.html#admin';
+    window.location.href = '../index.html#admin';
   }
 }
 checkSession();

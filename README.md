@@ -1,59 +1,105 @@
-## 🚀 Tech Week 2026 - UniCesumar Londrina
-Projeto desenvolvido para a disciplina de Desenvolvimento Front-end da Faculdade UniCesumar Londrina. O objetivo é gerenciar as inscrições e o controle de presença do maior evento de tecnologia da instituição.
+# 🚀 Tech Week — UniCesumar Londrina 2026
 
-### 👥 Equipe de Desenvolvedores
-Um esforço conjunto dos alunos:
-- Ana Giulia Negreli;
-- Abner Matheus;
-- Gabriel Dubinski;
-- João Elias;
-- José Flávio Xavier;
-- Matheus Souza Carvalho;
-- Pedro Lucas Silva Raimundo;
-- Yasmin Fernanda;
+O maior evento de tecnologia da UniCesumar Londrina. Palestras, workshops, projetos e networking em uma semana épica.
 
-### 🎯 Funcionalidades Principais
-O projeto foi concebido para oferecer uma experiência completa de gestão de eventos:
-- Sistema CRUD: Cadastro, leitura, atualização e deleção de participantes, palestrantes e projetos.
+**📅 1 a 3 de Junho, 2026 — Londrina, PR**
 
-- Controle de Presença: Função dedicada para verificação de entrada dos alunos em cada dia do evento.
+---
 
-- Área Administrativa: Painel restrito para coordenadores monitorarem métricas e gerenciarem dados.
+## 📁 Estrutura do Projeto (Clean Struct)
 
-- TechBot: Assistente virtual via chat para sanar dúvidas frequentes.
+Optamos pela organização **Clean Struct** para garantir melhor visualização, manutenção e escalabilidade do projeto. Cada tipo de arquivo possui sua própria pasta dedicada, facilitando a navegação e colaboração entre os membros do grupo.
 
-- Coffee Break Interativo: Sistema de confirmação de adesão com modal de aviso e compromisso.
+```
+Trabalho-Leonardo-WeekTech/
+│
+├── index.html                  ← Landing page principal
+├── env.js                      ← Credenciais Supabase (⚠️ gitignored)
+├── .gitignore
+├── README.md
+│
+├── assets/
+│   └── logos/                  ← Imagens e logos do projeto
+│       ├── unicesumar.png
+│       ├── caco.png
+│       ├── custodio.png
+│       └── vitorios.png
+│
+├── css/
+│   ├── style.css               ← Estilos da landing page
+│   ├── dashboard.css           ← Estilos do painel administrativo
+│   └── checkin.css             ← Estilos das telas de check-in
+│
+├── js/
+│   ├── script.js               ← Lógica da landing page + inscrições
+│   ├── dashboard.js            ← Lógica do painel administrativo
+│   └── checkin.js              ← Lógica do check-in de presença
+│
+├── pages/
+│   ├── dashboard.html          ← Painel administrativo (login necessário)
+│   ├── checkin-day1.html       ← Check-in presença — Dia 1 (01/06)
+│   ├── checkin-day2.html       ← Check-in presença — Dia 2 (02/06)
+│   └── checkin-day3.html       ← Check-in presença — Dia 3 (03/06)
+│
+└── docs/                       ← Documentação do projeto
+```
 
-### 🛠️ Tecnologias Utilizadas:
-- Interface (HTML/CSS)
+### Por que Clean Struct?
 
-- Mobile First: Design responsivo priorizando dispositivos móveis.
+- **Organização visual**: cada tipo de arquivo (HTML, CSS, JS, imagens) em seu lugar
+- **Facilidade de manutenção**: encontre qualquer arquivo rapidamente
+- **Escalabilidade**: fácil adicionar novas páginas, estilos ou scripts
+- **Colaboração**: todos do grupo sabem exatamente onde colocar novos arquivos
 
-- Glassmorphism: Estética moderna com desfoque de fundo (backdrop-filter), sombras suaves e cores neon.
+---
 
-- Estrutura Semântica: HTML5 organizado para SEO e acessibilidade.
+## 🛠️ Tecnologias Utilizadas
 
-- Inteligência (JavaScript)
+| Tecnologia | Uso |
+|---|---|
+| **HTML5** | Estrutura das páginas |
+| **CSS3** | Estilização com design system customizado |
+| **JavaScript (ES6+)** | Lógica, interatividade e integração |
+| **Supabase** | Backend (banco de dados, autenticação, realtime) |
+| **Chart.js** | Gráficos no dashboard administrativo |
+| **Font Awesome** | Ícones |
+| **Google Fonts** | Tipografia (Syne + JetBrains Mono) |
 
-- Manipulação de DOM: Atualização dinâmica da interface sem recarregamento.
+---
 
-- Tratamento de Erros: Uso de try/catch para garantir a resiliência do sistema.
+## ⚙️ Como Rodar
 
-- Lógica de Negócio: Funções modulares para troca de abas, envio de formulários e interação do chat.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/Pedrolucassss/Trabalho-Leonardo-WeekTech.git
+   ```
 
-- Backend & Persistência
+2. Crie o arquivo `env.js` na raiz com suas credenciais Supabase:
+   ```js
+   window.ENV = {
+     SUPABASE_URL: 'sua-url-aqui',
+     SUPABASE_KEY: 'sua-chave-aqui'
+   };
+   ```
 
-- Supabase: Utilização de Backend-as-a-Service (BaaS) para banco de dados em tempo real e autenticação.
+3. Abra o `index.html` no navegador (ou use Live Server no VS Code).
 
-### 🏗️ Arquitetura do Projeto:
-O projeto segue uma Arquitetura de Camadas Simples e Monolítica Front-end:
-- Raiz Plana: Organização simplificada onde index.html, style.css e script.js residem no diretório principal.
+> ⚠️ **Importante**: O arquivo `env.js` está no `.gitignore` para não vazar as chaves da API. Cada membro do grupo deve criar o seu localmente.
 
-- Portabilidade: Estrutura otimizada para deploy rápido em plataformas como GitHub Pages, Vercel ou Netlify.
+---
 
-### 📂 Como executar o projeto:
-1. Clone este repositório.
+## 👥 Funcionalidades
 
-2. Certifique-se de configurar as chaves do Supabase no arquivo "env.js".
+- **Landing Page** — Página principal com informações do evento, programação, palestrantes e projetos
+- **Inscrições** — Formulários para participantes, palestrantes e projetos (salvos no Supabase)
+- **Login Administrativo** — Autenticação via Supabase Auth
+- **Dashboard** — Painel com KPIs, gráficos, tabela de dados e exportação CSV
+- **Check-in de Presença** — Telas por dia do evento para confirmação via RA
+- **Chatbot** — Assistente TechBot para dúvidas sobre o evento
+- **Coffee Break** — Sistema de confirmação com modal de compromisso
 
-3. Abra o arquivo index.html em seu navegador ou utilize a extensão Live Server no VS Code.
+---
+
+## 👨‍💻 Desenvolvido por
+
+Alunos de **Análise e Desenvolvimento de Sistemas** e **Engenharia de Software** da UniCesumar Londrina.
