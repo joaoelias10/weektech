@@ -100,6 +100,13 @@ Trabalho-Leonardo-WeekTech/
 
 ---
 
-## 👨‍💻 Desenvolvido por
-
-Alunos de **Análise e Desenvolvimento de Sistemas** e **Engenharia de Software** da UniCesumar Londrina.
+### 👥 Equipe de Desenvolvedores
+Um esforço conjunto dos alunos:
+- Ana Giulia Negreli;
+- Abner Matheus;
+- Gabriel Dubinski;
+- João Elias;
+- José Flávio Xavier;
+- Matheus Souza Carvalho;
+- Pedro Lucas Silva Raimundo;
+- Yasmin Fernanda;
