@@ -180,7 +180,11 @@ window.loginAdmin = async function () {
 
     showToast('Login realizado! Redirecionando... 🔐');
     // Redireciona para o painel após 800ms (tempo do toast aparecer)
+<<<<<<< HEAD
     setTimeout(() => { window.location.href = '/pages/dashboard.html'; }, 800);
+=======
+    setTimeout(() => { window.location.href = 'pages/dashboard.html'; }, 800);
+>>>>>>> b323be5b3cf83bc62515196f1c97ae881b094dcb
 
   } catch (err) {
     // Mensagens de erro amigáveis
@@ -227,6 +231,7 @@ window.sendMessage = async function () {
   input.value = '';
 
   addMessage('user', text);
+<<<<<<< HEAD
 
   const typing = addMessage('bot', '...');
   await new Promise(r => setTimeout(r, 600));
@@ -291,3 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+=======
+  // Lógica do chatbot pode ser expandida aqui
+}
+>>>>>>> b323be5b3cf83bc62515196f1c97ae881b094dcb
