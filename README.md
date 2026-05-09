@@ -5,6 +5,7 @@ O maior evento de tecnologia da UniCesumar Londrina. Palestras, workshops, proje
 **📅 1 a 3 de Junho, 2026 — Londrina, PR**
 
 ---
+![Preview do site](assets/preview.png)
 
 ## 📁 Estrutura do Projeto (Clean Struct)
 
